@@ -14,15 +14,9 @@ variable "bucket_sse_algorithm" {
 variable "workspaces" {
   type        = list(string)
   description = "A list of terraform workspaces that IAM Roles/Policy will be created for"
-  default     = ["prod", "uat", "staging", "labs", "mgmt", "idp"]
 }
 
 variable "assume_policy" {
   type        = map(string)
   description = "A map that allows you to specify additional AWS principles that will be added to the backend roles assume role policy"
-
-  default = {
-    all  = "arn:aws:iam::975816917933:root,arn:aws:iam::292995800702:root,arn:aws:iam::904761875964:root"
-    prod = "arn:aws:iam::393167047391:root"
-  uat = "arn:aws:iam::121646045118:root" }
 }
