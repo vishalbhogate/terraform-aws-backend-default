@@ -14,7 +14,7 @@ data aws_iam_policy_document "iam-role-policy-restricted" {
 
   statement {
     actions   = ["dynamodb:GetItem", "dynamodb:PutItem", "dynamodb:DeleteItem"]
-    resources = ["arn:aws:dynamodb:*:*:table/terraform -lock"]
+    resources = ["arn:aws:dynamodb:*:*:table/terraform-lock"]
   }
 }
 
@@ -31,7 +31,7 @@ data aws_iam_policy_document "iam-role-policy" {
 
   statement {
     actions   = ["dynamodb:GetItem", "dynamodb:PutItem", "dynamodb:DeleteItem"]
-    resources = ["arn:aws:dynamodb:*:*:table/terraform -lock"]
+    resources = ["arn:aws:dynamodb:*:*:table/terraform-lock"]
   }
 }
 
